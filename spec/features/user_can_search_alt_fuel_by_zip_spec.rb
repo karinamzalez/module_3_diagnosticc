@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "user can search alternative stations" do
   scenario "guest user visits root & successfully searches fuel station" do
 # When I visit "/"
-    get "/"
+    visit "/"
 # And I fill in the search form with 80203
     within "#search" do
       fill_in "zip", :with => "80203"
