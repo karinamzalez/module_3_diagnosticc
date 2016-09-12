@@ -1,20 +1,36 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.5.1'
+gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'sqlite3'
-gem 'sass-rails', '~> 5.0.6'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'puma', '~> 3.0'
+gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2'
+
 gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'jbuilder', '~> 2.5'
+gem 'figaro'
+gem 'faraday'
 
 group :development, :test do
-  gem 'byebug'
+  gem 'byebug', platform: :mri
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'launchy'
+  gem 'nyan-cat-formatter'
+  gem 'shoulda-matchers'
+  gem 'pry'
+  gem 'database_cleaner'
+end
+
+group :test do
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console'
+  gem 'listen', '~> 3.0.5'
 end
 
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
