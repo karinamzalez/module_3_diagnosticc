@@ -4,8 +4,8 @@ class NRELService
 
   end
 
-  def staions_by_zip(zip)
-    conn.get("/api/alt-fuel-stations/v1/nearest?api_key="#{}"location=")
+  def stations_by_zip(zip)
+    conn.get("/api/alt-fuel-stations/v1/nearest?api_key=4MCP38KMwFr3sr5YUYa44JnNu8wTtbzpE42hKJDc&location=#{zip}")
   end
 
   private
