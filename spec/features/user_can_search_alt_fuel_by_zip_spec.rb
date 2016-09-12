@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "user can search alternative stations" do
-  context "can search fuel stations by zip" do
-    scenario "user visits root & successfully searches fuel station" do
+  scenario "guest user visits root & successfully searches fuel station" do
 # When I visit "/"
     get "/"
 # And I fill in the search form with 80203
@@ -15,9 +14,8 @@ RSpec.feature "user can search alternative stations" do
     expect(page).to have_current_path(search_path(zip: 80203))
 # Then I should see a list of the 10 closest stations within 6 miles sorted by distance
     within "#close-locations"
-      expect(page).to 
-# And the stations should be limited to Electric and Propane
-# And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
+    # And the stations should be limited to Electric and Propane
+    # And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
     end
   end
 end
