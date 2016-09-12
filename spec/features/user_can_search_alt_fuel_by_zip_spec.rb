@@ -5,7 +5,7 @@ RSpec.feature "user can search alternative stations" do
 # When I visit "/"
     visit "/"
 # And I fill in the search form with 80203
-    within "#search" do
+    within ".search-field" do
       fill_in "zip", :with => "80203"
     end
 # And I click "Locate"
