@@ -11,8 +11,6 @@ RSpec.describe "NREL Service" do
     zip = "80203"
     stations = service.stations_by_zip(zip)
 
-    # parsed_stations = JSON.parse(stations, :symbolize_names => true)
-
     expect(stations.count).to eq 8
   end
 end
