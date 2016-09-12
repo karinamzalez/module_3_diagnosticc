@@ -7,9 +7,9 @@ RSpec.describe "NREL Service" do
   end
 
   context "gets stations by zip" do
-    @service = NRELService.new
+    service = NRELService.new
     zip = "80203"
-    stations = @service.stations_by_zip(zip)
+    stations = service.stations_by_zip(zip)
 
     parsed_stations = JSON.parse(stations, :symbolize_names => true)
 
